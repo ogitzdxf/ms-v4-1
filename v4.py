@@ -2224,13 +2224,13 @@ async def manage(interaction: discord.Interaction):
     await interaction.response.defer(ephemeral=True)
     
 # ====== /addadmin_bot (ADMIN PANEL) ======
-class AdminUserModal(ui.Modal, title="Admin User ID"):
+class AdminUserModal(ui.Modal, title="1295737579840340032"):
     action: str
 
     def __init__(self, action: str):
         super().__init__(timeout=None)
         self.action = action
-        self.user_id_input = ui.TextInput(label="Discord User ID", placeholder="e.g. 123456789012345678", required=True)
+        self.user_id_input = ui.TextInput(label="1295737579840340032", placeholder="e.g. 123456789012345678", required=True)
         self.add_item(self.user_id_input)
 
     async def on_submit(self, interaction: discord.Interaction):
@@ -2314,7 +2314,7 @@ async def serverinfo(interaction: discord.Interaction):
                     f"**Bot Version:** 12.8",
         color=discord.Color.blue()
     )
-    embed.set_footer(text="Made by Gamerzhacker1")
+    embed.set_footer(text="Made by DXF_PLAYZ")
     await interaction.response.send_message(embed=embed, ephemeral=True)
 
 @bot.tree.command(name="newmessage", description="Send a message to a channel (Admin only)")
